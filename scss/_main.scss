@@ -1,0 +1,235 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS Main CSS Documentation:
+----------------------------------------------------------------
+1.0 Page
+2.0 Cover
+3.0 Custom
+--------------------------------------------------------------*/
+
+// 1.0 Page
+
+body{
+  @include gradientBlue;
+}
+
+.page {
+  position: relative;
+
+  &__static {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include display_full;
+  }
+
+  &__image {
+    @include display_full;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// 2.0 Cover
+.cover {
+  position: relative;
+  overflow: hidden;
+  @include gradientBlue;
+  
+  &__title{
+    font-family: $font_2;
+    color: $white;
+    font-size: 2em;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: 20;
+
+    @include max-responsive($sm){
+      font-size: 0.8em;
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &__content{
+
+    &__item{
+      position: absolute;
+      bottom: 0;
+    }
+
+    .wave{      
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+
+      &__item{
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: -1px;
+        
+        .animation{
+          position: absolute;
+          left: 0;
+          width: 200%;
+          height: 100%;
+          background-repeat: repeat no-repeat;
+          background-position: 0 bottom;
+          transform-origin: center bottom;
+          // background-size: 150% 150%;
+
+          @include max-responsive($sm){
+            background-size: 50% 50%;
+          }
+        }
+
+        &--1{
+          z-index: 7;
+          background-image: url(../images/cover-wave-1.png);        
+          height: 100%;
+          animation: move_wave 20s linear infinite;
+        }
+        
+        &--2{
+          z-index: 6;
+          background-image: url(../images/cover-wave-2.png);        
+          height: 100%;
+          animation: move_wave 18s linear infinite;
+        }
+        
+        &--3{
+          z-index: 5;
+          background-image: url(../images/cover-wave-3.png);        
+          height: 100%;
+          animation: move_wave 16s linear infinite;
+        }
+        
+        &--4{
+          z-index: 4;
+          background-image: url(../images/cover-wave-4.png);       
+          height: 100%;
+          animation: move_wave 15s linear infinite;
+        }
+        
+        &--5{
+          z-index: 3;
+          background-image: url(../images/cover-wave-5.png);       
+          height: 100%;
+          animation: move_wave 14s linear infinite;
+        }
+        
+        &--6{
+          z-index: 2;
+          background-image: url(../images/cover-wave-6.png);       
+          height: 100%;
+          animation: move_wave 13s linear infinite;
+        }
+      }
+    }
+    
+    .building{
+      position: absolute;
+      bottom: 1%;
+      left: 0;
+      z-index: 1;
+      
+      @include min-responsive($xlg){
+        bottom: -3.5%;
+      }
+    }
+    
+    .boat{
+      position: absolute;
+      bottom: -3%;
+      left: 9%;
+      z-index: 5;
+
+      @include min-responsive($xlg){
+        bottom: -5%;
+      }
+    }
+    
+    .hill{
+      z-index: 3;
+      bottom: -3%;
+      
+      @include min-responsive($xlg){
+        bottom: -5%;
+      }
+    }
+
+    .kilang{
+      z-index: 4;
+      bottom: -3%;
+      width: 90%;
+      right: 0;
+    }
+  }
+}
+
+// 3.0 Custom
+
+.scroll-down {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  margin: auto;
+  width: 40px;
+  z-index: 3;
+  color: $white;
+}
+
+// Modal Popup
+.popup__content {
+  .modal-dialog{
+    margin: 60% auto 10px;
+  }
+
+  @media (min-width: 768px){
+    .modal-dialog {
+        width: 600px;
+        margin: 15% auto 20px;
+    }
+  }
+  .modal-content {
+    border-radius: 0px;
+    background-color: $yellow;
+  }
+  .modal-header {
+    border-bottom: 0px;
+    text-align: center;
+    font-size: 1.4em;
+
+    .close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ffaa00;
+      border: none;
+      padding: 0px 10px;
+      font-size: 20px;
+      font-weight: bold;
+
+      @include max-responsive($sm){
+        right: 0;
+      }
+    }
+  }
+
+  .modal-body{
+    text-align: center;
+  }
+}
+

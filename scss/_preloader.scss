@@ -1,0 +1,24 @@
+#preloader {
+	overflow: hidden;
+    background: #35250c;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    position: fixed;
+	bottom: 0;
+	
+	.wrapper {
+		position: relative;
+		margin: 0 auto;
+		text-align: center;
+
+		&__content{
+			width: 400px;
+			margin: auto;
+
+			@include max-responsive($sm){
+				width: 300px;
+			}
+		}
+	}
+}

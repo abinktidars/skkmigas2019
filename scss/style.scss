@@ -1,0 +1,21 @@
+/*=================================================================
+    Company      : Digital Advertising Division - Kompas.com
+    Document     : CSS
+    Author       : Muhamad Ambrikom Tidar - Front End Developer
+    Project Name : VIP - SKK Migas
+    Year		 : 2019
+=================================================================*/
+
+// base sass, mixin + variable
+@import 'base';
+
+// global
+@import 'reset';
+@import 'grid';
+@import 'fontface';
+@import 'utilities';
+@import 'preloader';
+
+// main
+@import 'main';
+@import 'animation';
