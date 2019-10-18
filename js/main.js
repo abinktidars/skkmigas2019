@@ -54,10 +54,16 @@ $(document).ready(function() {
         $(".page__animation__city--moon").fadeOut(300);
         
       }
-      else if (index == 3 && direction == "down") {            
-                          
+      else if (index == 3 && direction == "down") {          
+        $(".page__static__build").addClass("moveLeft");  
+        $(".page__static__apart").removeClass("scrollSlide");
+        $(".page__animation__apart--mobil").velocity({right: "20%"}, {delay: 200, duration: 3000}); 
+        $(".page__animation__apart--mobil2").velocity({left: "32%"}, {delay: 1500, duration: 5000})  
+        
       } 
       else if (index == 4 && direction == "up") {
+        $(".page__static__apart").addClass("scrollSlide");
+        $(".page__static__build").removeClass("moveLeft");  
            
       }
       else if (index == 4 && direction == "down") { 

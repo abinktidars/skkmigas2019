@@ -58,7 +58,22 @@ body{
       &--moon{
         display: none;
       }
+      &--gedung{
+        // display: none;
+        // right: -20%;      
+      }
 
+    }
+
+    &__apart{
+
+      &--mobil{
+        right: 0;
+      }
+
+      &--mobil2{
+        left: -20%;
+      }
     }
   }
 

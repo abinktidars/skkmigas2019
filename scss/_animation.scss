@@ -259,6 +259,34 @@ body {
   }
 }
 
+// 2.5 Floating Down Super Slow
+@-webkit-keyframes floatSuperSlow {
+  from {
+    @include base_position_y(-7px);
+  }
+  to {
+    @include base_position_y(7px);
+  }
+}
+
+@-moz-keyframes floatSuperSlow {
+  from {
+    @include base_position_y(-7px);
+  }
+  to {
+    @include base_position_y(7px);
+  }
+}
+
+@keyframes floatSuperSlow {
+  from {
+    @include base_position_y(-7px);
+  }
+  to {
+    @include base_position_y(7px);
+  }
+}
+
 // 2.5 Fade In Left
 @-webkit-keyframes fadeInLeft {
   0% {
