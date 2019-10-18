@@ -1,88 +1,24 @@
-// Fade In Body
-@-webkit-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-body {
-  animation-name: fade;
-  animation-duration: 2s;
-}
-
-// Move Down
-@-webkit-keyframes movedown {
-  0% {
-    top: -120px;
-    transition: all ease 0.4s;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@-moz-keyframes movedown {
-  0% {
-    top: -120px;
-    transition: all ease 0.4s;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@keyframes movedown {
-  0% {
-    top: -120px;
-    transition: all ease 0.4s;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-// Wave Animation
-  @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.85)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS Utilities CSS Documentation:
+----------------------------------------------------------------
+1.0 Animate General
+2.0 List Animate
+  2.1 Fade In
+  2.2 Move Down
+  2.3 Floating Down
+  2.4 Floating Down Slow
+  2.5 Fade In Left
+  2.6 fade In Up
+  2.7 Rotate
+  2.8 Flash
+  2.9 Blink
+3.0 Swing
+  3.1 Glow Effect
+  3.2 Wave
+--------------------------------------------------------------*/
 
 
-// Animate
+// 1.0 Animate General
 .animate {
   &--rotating {
     -webkit-animation: rotating 10s linear infinite;
@@ -113,6 +49,28 @@ body {
     -ms-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+  }
+  &--flash{
+    -webkit-animation: flash 1.4s alternate;
+    -moz-animation: flash 1.4s alternate;
+    animation: flash 1.4s alternate;
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  &--flashSlow{
+    -webkit-animation: flash 1s alternate;
+    -moz-animation: flash 1s alternate;
+    animation: flash 1s alternate;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
   }
   &--pushDown {
     @include base_position_y(100%);
@@ -153,9 +111,99 @@ body {
     @include base_scale(2);
     @include transition(1s);
   }
+  &--posLeft{
+    @include transition(1s);
+    @include base_position(-100%);
+  }
+  &--blink{
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  &--swing{
+    animation-name: swing;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  &--glow{
+    -webkit-animation: glow 1.2s ease-in-out infinite alternate;
+    -moz-animation: glow 1.2s ease-in-out infinite alternate;
+    animation: glow 1.2s ease-in-out infinite alternate;
+  }
 }
 
-// Floating Down
+// 2.0 List Animate
+
+// 2.1 Fade In
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+// 2.2 Move Down
+@-webkit-keyframes movedown {
+  0% {
+    top: -120px;
+    transition: all ease 0.4s;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@-moz-keyframes movedown {
+  0% {
+    top: -120px;
+    transition: all ease 0.4s;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: -120px;
+    transition: all ease 0.4s;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+// 2.3 Floating Down
 @-webkit-keyframes float {
   from {
     @include base_position_y(-15%);
@@ -183,7 +231,7 @@ body {
   }
 }
 
-// Floating Down 2
+// 2.4 Floating Down Slow
 @-webkit-keyframes floatSlow {
   from {
     @include base_position_y(-5%);
@@ -211,35 +259,7 @@ body {
   }
 }
 
-// Floating Down 3
-@-webkit-keyframes floatSuperSlow {
-  from {
-    @include base_position_y(-7px);
-  }
-  to {
-    @include base_position_y(7px);
-  }
-}
-
-@-moz-keyframes floatSuperSlow {
-  from {
-    @include base_position_y(-7px);
-  }
-  to {
-    @include base_position_y(7px);
-  }
-}
-
-@keyframes floatSuperSlow {
-  from {
-    @include base_position_y(-7px);
-  }
-  to {
-    @include base_position_y(7px);
-  }
-}
-
-// fadeInLeft
+// 2.5 Fade In Left
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -275,7 +295,7 @@ body {
   animation-name: fadeInLeft;
 }
 
-// fadeInup
+// 2.6 Fade In Up
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -311,8 +331,7 @@ body {
   animation-name: fadeInUp;
 }
 
-// Rotate
-
+// 2.7 Rotate
 @keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -364,5 +383,129 @@ body {
   to {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+  }
+}
+
+// 2.8 Flash
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flashSlow {
+  from, 100%, to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flashSlow {
+  from, 100%, to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+// 2.9 Blink
+@keyframes blink {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 $green;
+  }
+
+  50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 8px rgba(255,232,102,0)
+  }
+
+  to {
+      transform: scale(1);
+      box-shadow: 0 0 rgba(255,232,102,0)
+  }
+}
+
+// 3.0 Swing
+@keyframes swing{
+  0%{
+    transform: translateX(-7%)
+  }
+  50%{
+    transform: translateX(7%)
+  }
+  100%{
+    transform: translateX(0%)
+  }
+}
+@keyframes swingReverse{
+  0%{
+    transform: translateX(7%)
+  }
+  50%{
+    transform: translateX(-7%)
+  }
+  100%{
+    transform: translateX(0%)
+  }
+}
+
+// 3.1 Glow Effect
+@keyframes glow {
+  from {
+    text-shadow: 
+    // 0 0 10px #000, 
+    // 0 0 20px #000, 
+    // 0 0 30px #000, 
+    0 0 30px #66cc33, 
+    0 0 20px #66cc33, 
+    // 0 0 80px #66cc33, 
+    // 0 0 100px #66cc33, 
+    // 0 0 150px #66cc33;
+  }
+  to {
+    text-shadow: 
+    // 0 0 5px #000, 
+    // 0 0 10px #000, 
+    // 0 0 15px #000, 
+    0 0 10px #66cc33, 
+    0 0 15px #66cc33, 
+    // 0 0 40px #66cc33, 
+    // 0 0 50px #66cc33, 
+    // 0 0 75px #66cc33;
+  }
+}
+
+//3.2 Wave
+
+// Wave Animation
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.85)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
   }
 }

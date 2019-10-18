@@ -33,15 +33,25 @@ $(document).ready(function() {
 
       if (index == 1 && direction == "down") {
         $(".backtop").addClass("show");
-                    
+        $(".page__animation__city--train").velocity({right:"0"}, {delay: 500, duration: 5000});
+        $(".page__static__build").addClass("moveDown");
       } 
       else if (index == 2 && direction == "up") {
         $(".backtop").removeClass("show");
+        $(".page__static__build").removeClass("moveDown");
       } 
       else if (index == 2 && direction == "down") {      
+        $(".page__animation__city--awan").fadeOut(300);
+        $(".page__animation__city--awan2").fadeOut(300);
+        $(".overlay__halfblack").fadeIn(300);
+        $(".page__animation__city--moon").fadeIn(300);
         
       } 
       else if (index == 3 && direction == "up") {
+        $(".page__animation__city--awan").fadeIn(300);
+        $(".page__animation__city--awan2").fadeIn(300);
+        $(".overlay__halfblack").fadeOut(300);
+        $(".page__animation__city--moon").fadeOut(300);
         
       }
       else if (index == 3 && direction == "down") {            
@@ -61,6 +71,9 @@ $(document).ready(function() {
       
     }
   });
+
+  // Picture element HTML5 shiv
+  document.createElement("picture");
   
 });
 

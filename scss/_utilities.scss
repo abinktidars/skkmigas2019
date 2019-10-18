@@ -119,6 +119,7 @@ a{
 .text{
   font-size: 19px;
   color: $white;
+  margin-top: -20vw;
 
   @include max-responsive($sm){
     font-size: 16px;
@@ -433,6 +434,25 @@ a{
   height: 100%;
 }
 
+// 5.1 Gradient
+.overlay{
+  @include display_full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__black{
+    @include bg-gradient-black;
+  }
+
+  &__halfblack{
+    @include bg-black;
+  }
+  &__radial--black{
+    @include bg-radial-black;
+  }
+}
 
 // 5.2 Parallax - Position
 .parallax{
@@ -473,6 +493,10 @@ a{
 
 .moveUp {
   top: -100% !important
+}
+
+.pushDown {
+  top: 100% !important
 }
 
 .display{
