@@ -64,15 +64,44 @@ $(document).ready(function() {
       else if (index == 4 && direction == "up") {
         $(".page__static__apart").addClass("scrollSlide");
         $(".page__static__build").removeClass("moveLeft");  
-           
+        
       }
       else if (index == 4 && direction == "down") { 
-        
+        $(".page__static__apart").addClass("moveLeft");  
+        $(".page__static__mrt").removeClass("scrollSlide");
+        $(".page__animation__mrt--people").velocity({right: "0%", opacity: "1"}, {delay: 300, duration: 700});
       } 
       else if (index == 5 && direction == "up") {
+        $(".page__static__apart").removeClass("moveLeft");
+        $(".page__static__mrt").addClass("scrollSlide");  
                   
       }
       else if (index == 5 && direction == "down") {    
+        
+      } 
+      else if (index == 6 && direction == "up") { 
+        
+      } 
+      else if (index == 6 && direction == "down") {
+                  
+      }
+      else if (index == 7 && direction == "up") {    
+
+      } 
+      else if (index == 7 && direction == "down") {    
+
+      } 
+      else if (index == 8 && direction == "up") {    
+
+      } 
+      else if (index == 8 && direction == "down") {    
+
+      } 
+      else if (index == 9 && direction == "up") {    
+
+      } 
+      else if (index == 9 && direction == "down") {    
+
       } 
       
     }

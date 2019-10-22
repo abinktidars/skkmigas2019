@@ -75,6 +75,29 @@ body{
         left: -20%;
       }
     }
+
+    &__mrt{
+
+      &--people{
+        right: -5%;
+        // display: none;
+      }
+      &--people1{
+        display: none;       
+      }
+      &--people2{
+        display: none;
+      }
+      &--people3{
+        display: none;
+      }
+      &--people4{
+        display: none;
+      }
+      &--people5{
+        display: none;        
+      }
+    }
   }
 
   &__static {
