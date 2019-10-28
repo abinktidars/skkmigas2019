@@ -99,6 +99,11 @@
     -moz-animation: floatSuperSlow 1.5s ease infinite alternate;
     animation: floatSuperSlow 1.5s ease infinite alternate;
   }
+  &--car {
+    -webkit-animation: car 0.3s ease infinite alternate;
+    -moz-animation: car 0.3s ease infinite alternate;
+    animation: car 0.3s ease infinite alternate;
+  }
   &--scaleOut{
     @include base_scale(0);
     @include transition(1s);
@@ -287,7 +292,35 @@ body {
   }
 }
 
-// 2.5 Fade In Left
+// 2.6 Car
+@-webkit-keyframes car {
+  from {
+    @include base_position_y(-2px);
+  }
+  to {
+    @include base_position_y(2px);
+  }
+}
+
+@-moz-keyframes car {
+  from {
+    @include base_position_y(-2px);
+  }
+  to {
+    @include base_position_y(2px);
+  }
+}
+
+@keyframes car {
+  from {
+    @include base_position_y(-2px);
+  }
+  to {
+    @include base_position_y(2px);
+  }
+}
+
+// 2.7 Fade In Left
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -323,7 +356,7 @@ body {
   animation-name: fadeInLeft;
 }
 
-// 2.6 Fade In Up
+// 2.8 Fade In Up
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -359,7 +392,7 @@ body {
   animation-name: fadeInUp;
 }
 
-// 2.7 Rotate
+// 2.9 Rotate
 @keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -414,7 +447,7 @@ body {
   }
 }
 
-// 2.8 Flash
+// 3.0 Flash
 @-webkit-keyframes flash {
   from, 50%, to {
     opacity: 1;
@@ -455,7 +488,7 @@ body {
   }
 }
 
-// 2.9 Blink
+// 3.1 Blink
 @keyframes blink {
   0% {
       transform: scale(1);
@@ -473,7 +506,7 @@ body {
   }
 }
 
-// 3.0 Swing
+// 3.2 Swing
 @keyframes swing{
   0%{
     transform: translateX(-7%)
@@ -497,7 +530,7 @@ body {
   }
 }
 
-// 3.1 Glow Effect
+// 3.3 Glow Effect
 @keyframes glow {
   from {
     text-shadow: 
@@ -523,7 +556,7 @@ body {
   }
 }
 
-//3.2 Wave
+//3.5 Wave
 
 // Wave Animation
 @keyframes move_wave {

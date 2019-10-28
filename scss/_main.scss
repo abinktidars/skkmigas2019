@@ -29,6 +29,45 @@ body{
     left: 0;
   }
 
+  &__10{
+
+    .text{
+      margin-top: 0vw;
+    }
+
+    .pembangkit{
+      color: $white;
+
+      p{
+        font-size: 1.3em;
+      }
+    }
+
+    .data-pembangkit{
+      text-align: center;
+      margin: 20px auto;
+
+      // .area{
+      //   color: $white;
+      // }
+
+      .area{
+        color: #668079;
+        padding: 10px;
+        background: $white;
+        width: 310px;
+        margin: auto;
+      }
+    }
+  }
+
+  &__11{
+
+    h3{
+      color: $white;
+    }
+  }
+
   &__animation {
     width: 100%;
     height: 100%;
@@ -80,22 +119,40 @@ body{
 
       &--people{
         right: -5%;
+        opacity: 0;
         // display: none;
       }
       &--people1{
-        display: none;       
+        right: -5%;              
+        opacity: 0;
       }
       &--people2{
-        display: none;
+        right: -5%;                      
+        opacity: 0;
       }
       &--people3{
-        display: none;
+        right: -5%;                              
+        opacity: 0;
       }
       &--people4{
-        display: none;
+        right: -5%;                              
+        opacity: 0;
       }
       &--people5{
-        display: none;        
+        right: -5%;                                            
+        opacity: 0;
+      }
+    }
+
+    &__listrik{
+
+      &--mrt{
+        left: 0;
+        z-index: 110;
+      }
+
+      &--angkot{
+        left: -40%;
       }
     }
   }
@@ -111,12 +168,22 @@ body{
 
     &__build{
       top: 100%;
-      @include gradientBlue2;
+      // @include gradientBlue2;
 
       .overlay__halfblack{
         display: none;
       }
             
+    }
+
+    &__pembangkit{
+      top: 100%;
+      background: #668079;
+    }
+
+    &__tambang{
+      top: 100%;
+      @include gradientBlue3;      
     }
 
   }
@@ -143,12 +210,19 @@ body{
 
     }
 
+    &--soon{
+      @include gradientBlue2;
+      // opacity: 0;
+    }
+
     &--evening{
       @include gradientBlue;
     }
-    &--soon{
-      @include gradientBlue2;
+
+    &--blue{
+      background: #668079;
     }
+
   }
 
   &__2{

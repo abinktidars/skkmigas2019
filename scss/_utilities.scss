@@ -506,3 +506,11 @@ a{
 .hide{
   opacity: 0 !important;
 }
+
+.zTop{
+  z-index: 100;
+}
+
+.fixed{
+  position: fixed !important;
+}
