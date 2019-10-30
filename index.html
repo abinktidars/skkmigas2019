@@ -49,7 +49,7 @@
               <!-- Spinner -->  
               <div class="spinner mt3">
                 <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                  <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                  <circle classg="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
                 </svg>
                 <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                   <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
@@ -278,6 +278,32 @@
           <span data-src="images/bg-tambang.png" data-media="(min-width: 800px)"></span>
         </div>
       </div>
+      <div class="overlay overlay__grey"></div>
+      <div class="overlay overlay__halfblack2"></div>
+    </div>
+
+    <!-- Scene Produksi-->
+    <div class="page__static page__static__produksi">
+      <div class="page__animation page__animation__produksi">
+        <div class="picturefill-background page__animation__produksi--bg">
+          <span data-src="images/bg-produksi-old.png"></span>
+          <span data-src="images/bg-produksi-old.png" data-media="(min-width: 800px)"></span>
+        </div>
+        <div class="picturefill-background page__animation__produksi--industry">
+          <span data-src="images/bg-produksi-industry-old.png"></span>
+          <span data-src="images/bg-produksi-industry-old.png" data-media="(min-width: 800px)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene Eksploitasi-->
+    <div class="page__static page__static__eksplo">
+      <div class="page__animation page__animation__eksplo">
+        <div class="picturefill-background page__animation__eksplo--bg">
+          <span data-src="images/bg-eksplo.png"></span>
+          <span data-src="images/bg-eksplo.png" data-media="(min-width: 800px)"></span>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -340,13 +366,18 @@
         <div class="cover__content__item kilang">
           <img src="images/cover-kilang.png" alt="">
         </div>
+        
+        <!-- Fire -->
+        <div class="cover__content__item fire">
+          <img src="images/fire.gif" alt="">
+        </div>
       </div>
     </section>
 
     <!-- Page 2 -->
     <section class="section page page__2">      
       <div class="container">
-        <p class="text text-center">Bayangkan apa yang terjadi jika listrik padam untuk jangka waktu yang lama?</p>        
+        <p class="text text__top text-center">Bayangkan apa yang terjadi jika listrik padam untuk jangka waktu yang lama?</p>        
       </div>
     </section>
 
@@ -356,10 +387,10 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <p class="text text-center">
+              <p class="text text__top text-center">
                   Jalanan yang tadinya semarak dengan warna-warni lampu di malam hari langsung gelap gulita. <br>
                   Cahaya dari gedung bertingkat dan rumah-rumah warga pun ikut padam. 
-              </p>
+              </p>              
             </div>
           </div>
         </div>
@@ -372,7 +403,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-7 col-lg-offset-6">
-              <p class="text text-left">
+              <p class="text text__top text-left">
                 Komputer, televisi, pendingin udara, lemari es, dan
                 berbagai perangkat elektronik yang biasa digunakan
                 untuk menunjang aktivitas sehari-hari menjadi
@@ -397,7 +428,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <p class="text text-center">
+              <p class="text text__top text-center">
                 Sistem perbankan berbasis digital tak ketinggalan terkena imbasnya. Aplikasi mobile banking dan
                 internet banking sulit diakses lantaran jaringan data selular terganggu.
               </p>
@@ -413,7 +444,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <p class="text text-center">
+              <p class="text text__top text-center">
                 Sementara itu, di stasiun-stasiun kereta, penumpang membludak karena
                 kereta listrik yang berhenti beroperasi. 
               </p>
@@ -429,7 +460,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <p class="text text-center">
+              <p class="text text__top text-center">
                 Begitu juga dengan sektor industri manufaktur. Pabrik-pabrik terpaksa berhenti
                 beroperasi karena tidak ada suplai listrik untuk mesin-mesinnya. 
               </p>
@@ -445,7 +476,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <div class="text text-center">              
+              <div class="text text__top text-center">              
                 <p>
                   Pemadaman listrik bisa terjadi karena beberapa hal, seperti kerusakan dan kendala
                   teknis yang terjadi pada pembangkit listrik.
@@ -467,7 +498,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <div class="text text-center">
+              <div class="text text__top text-center">
                 <p>
                   Contohnya, Pembangkit Listrik Tenaga Diesel (PLTD) Sawai Putussibau di Kapuas Hulu, Kalimantan Barat.
                 </p>
@@ -500,21 +531,21 @@
               </div>
             </div>
             <div class="pembangkit row">
-              <div class="pembangkit__item col-lg-4">
+              <div class="pembangkit__item col-lg-4 col-xs-4">
                 <img src="images/pembangkit-1.png" alt="">
                 <p>
                   PLTD <br>
                   4.801 pembangkit
                 </p>
               </div>
-              <div class="pembangkit__item col-lg-4">
+              <div class="pembangkit__item col-lg-4 col-xs-4">
                 <img src="images/pembangkit-2.png" alt="">
                 <p>
                   5.389 <br>
                   Pembangkit listrik Indonesia
                 </p>
               </div>
-              <div class="pembangkit__item col-lg-4">
+              <div class="pembangkit__item col-lg-4 col-xs-4">
                 <img src="images/pembangkit-3.png" alt="">
                 <p>
                   PLTG <br>
@@ -539,7 +570,7 @@
         <div class="display-center">
           <div class="container">
             <div class="col-lg-12">
-              <p class="text text-center">
+              <p class="text text__top text-center">
                 Bayangkan jika migas di Indonesia mengalami kelangkaan. Bisa-bisa negara ini mengalami krisis karena pembangkit listrik yang tidak bisa beroperasi akibat kekurangan pasokan bahan bakar. 
               </p>
               <h3 class="mt2">NAMUN, APAKAH HAL ITU DAPAT BENAR-BENAR TERJADI?</h3>
@@ -562,17 +593,402 @@
                 <p>
                     Indonesia pun tidak luput dari risiko tersebut. Lantaran, dari tahun ke tahun jumlah konsumsi minyak nasional terus mengalami peningkatan, sementara laju produksinya terus menurun.
                 </p>
+                <div class="label">
+                  TREN PRODUKSI DAN KONSUMSI MINYAK 2014-2018
+                </div>
+                <div class="graphic mt1">
+                  <img src="images/chart-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="credit-chart">
+        <p>Sumber : BP Statiscial Review of World Energy 2019</p>
+      </div>
+      <div class="credit-label">
+        <img src="images/label-minyak.jpg" alt="">
+      </div>
+    </section>
+    
+    <!-- Page 13 -->
+    <section class="section page page__13">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-6">
+              <img src="images/chart-2.png" alt="">
+            </div>
+            <div class="col-lg-6">
+              <div class="text text-left text--black">
+                <p>Kondisi tersebut makin diperparah dengan jumlah cadangan minyak Indonesia yang terbukti semakin merosot setiap tahunnya.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
+    <!-- Page 14 -->
+    <section class="section page page__14">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text text--black">
+                <p>
+                  Sebagai solusi jangka pendek, pemerintah pun melakukan impor minyak bumi untuk memenuhi kebutuhan dalam negeri.
+                </p>
+                <p>
+                  Berdasarkan data Badan Pusat Statistik (BPS) selama 2018 volume impor minyak mentah mencapai 16,9 juta ton dan minyak olahan sebesar 26,6 juta ton.</p>
+                </p>
+                <div class="graphic text-center">
+                  <img src="images/drums.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Page 15 -->
+    <section class="section page page__15">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text">
+                <p>
+                    Sektor gas memiliki kondisi sedikit berbeda. Meski pasokan gas dalam negeri masih lebih besar dari tingkat konsumsinya, ada tren penurunan dari sisi produksi gas. 
+                </p>
+                <div class="label">
+                    TREN PRODUKSI DAN KONSUMSI GAS 2014-2018
+                </div>
+                <div class="graphic mt1">
+                  <img src="images/chart-3.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="credit-chart">
+        <p> Satuan : BCM (Billion Cubic Meters) <br>
+            Sumber : BP Statiscial Review of World Energy 2019
+        </p>
+      </div>
+      <div class="credit-label">
+        <img src="images/label-gas.jpg" alt="">
+      </div>
+    </section>
+    
+    <!-- Page 16 -->
+    <section class="section page page__16">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text text__top">
+                <p>
+                    Usut punya usut, ternyata penurunan angka produksi migas setidaknya disebabkan oleh dua faktor, yakni :
+                </p>                
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="text text-center">
+                  <p>
+                      Pertama, laju penurunan produksi alami lapangan migas di Indonesia cukup tinggi karena blok migas sudah berusia tua. Untuk <span>minyak bumi</span> rata-rata mencapai <span> 29 persen </span> per tahun dan <span> gas bumi 18 persen </span> per tahun.*
+                  </p>
+                  <p>Kedua, belum ada lagi penemuan cadangan besar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Page 17 -->
+    <section class="section page page__17">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text text__top">
+                <p>
+                    Kondisi tersebut jelas mengkhawatirkan. Padahal, di masa yang akan datang ketergantungan Indonesia akan migas diprediksi masih sangat tinggi.
+                </p>                
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="text text-center">
+                  <p>
+                      Data Outlook Energi Indonesia 2018 menyebutkan, <span> kebutuhan energi </span> di Indonesia pada 2050 mencapai <span> 4.569 juta </span> Setara Barel Minyak (SBM) dengan <span> konsumsi bahan bakar minyak </span> (BBM) <span>40,1 persen.</span>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="credit-chart">
+        <p> Buletin SKK Migas, Maret 2019*
+        </p>
+      </div>
+    </section>
+
+    <!-- Page 18 -->
+    <section class="section page page__18">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text">
+                <p>
+                    Untuk dapat memenuhi kebutuhan migas saat ini dan masa mendatang, Indonesia masih mengandalkan hasil produksi dari wilayah-wilayah kerja migas yang telah berproduksi sejak bertahun-tahun lalu.</p>
+                <p>
+                    Berdasarkan data terbaru dari SKK Migas, hingga Agustus 2019 Indonesia memiliki 208 Wilayah Kerja (WK) migas aktif, yakni:
+                </p>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <!-- Page 19 -->
+    <section class="section page page__19">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <!-- Wilayah Kerja-->
+            <div class="eksplorasi hidden-xs">
+              <ul class="row clearfix">
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--red">
+                    <h5>92 WK</h5>
+                    <p>Eksploitasi</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/right.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--green">
+                    <h5>70</h5>
+                    <p>Minyak &amp; Gas</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/plus.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--yellow">
+                    <h5>22</h5>
+                    <p>Hidrokarbon
+                    Nonkonvensional</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="row clearfix">
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--red">
+                    <h5>92 WK</h5>
+                    <p>Eksploitasi</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/right.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--green">
+                      <h5>74</h5>
+                      <p>Onstream</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/plus.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--yellow">
+                    <h5>16</h5>
+                    <p>Development</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="row clearfix">
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--red">
+                    <h5>24 WK</h5>
+                    <p>Proses Terminasi</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/right.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--green">
+                    <h5>13</h5>
+                    <p>Minyak &amp; Gas</p>
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="image">
+                    <img src="images/icon/plus.png" alt="">
+                  </div>
+                </li>
+                <li class="eksplorasi__item col-20">
+                  <div class="box box--yellow">
+                      <h5>11</h5>
+                      <p>Hidrokarbon
+                      Nonkonvensional</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Eksplo Button-->
+            <div class="row wk">
+              <div class="col-lg-3 col-xs-6">
+                <div class="wk__item" data-toggle="modal" data-target="#eksplorasi1">
+                  WK <br>
+                  Eksploitasi
+                </div>
+              </div>
+              <div class="col-lg-3 col-xs-6">
+                <div class="wk__item" data-toggle="modal" data-target="#eksplorasi2">
+                  WK <br>
+                  Eksplorasi
+                </div>
+              </div>
+              <div class="col-lg-3 col-xs-6">
+                <div class="wk__item" data-toggle="modal" data-target="#eksplorasi3">
+                  WK Proses<br>
+                  Terminal
+                </div>
+              </div>
+              <div class="col-lg-3 col-xs-6">
+                <div class="wk__item" data-toggle="modal" data-target="#eksplorasi4">
+                  WK Hidrokarbon <br>
+                  Nonkonvensional
+                </div>
+              </div>
+
+              <div class="click animate--float">
+                <img src="images/icon/click.png" alt="">
+              </div>
+            </div>
+
+            <div class="text mt1">
+              <p>
+                  Dari total 206 WK tersebut, terdapat 37 WK yang sudah berproduksi dengan kontrak Gross Split, yakni 21 WK Eksploitasi dan 16 WK Eksplorasi.
+              </p>             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="credit-chart">
+        <p> *Data update per 30 September 2019 </p>
+      </div>
+
+    </section>
+    
+    <!-- Page 20 -->
+    <section class="section page page_20">
+      <div class="display-table">
+        <div class="display-center">
+          <div class="container">
+            <div class="col-lg-12">
+              <div class="text">
+                <p>
+                    Dari total 206 WK tersebut, terdapat 37 WK yang sudah berproduksi dengan kontrak Gross Split, yakni 21 WK Eksploitasi dan 16 WK Eksplorasi.
+                </p>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
 
   </div>
 
   <!-- Popup Content-->
   <div class="popup__content">  
+
+    <!-- Eksplorasi -->
+    <div id="eksplorasi1" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h4 class="modal-title">WK Eksploitasi</h4>
+          </div>
+          <div class="modal-body">
+            <p>Wilayah kerja dengan rangkaian kegiatan yang bertujuan untuk menghasilkan minyak dan gas bumi. Kegiatannya terdiri atas pengeboran dan penyelesaian sumur, pembangunan sarana           pengangkutan, penyimpanan, pengolahan untuk pemisahan, pemurnian minyak dan gas bumi di lapangan, serta kegiatan pendukung lainnya. Kegiatan eksplorasi juga dapat dilakukan pada wilayah kerja ini.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eksplorasi 2 -->
+    <div id="eksplorasi2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h4 class="modal-title">WK Eksplorasi</h4>
+          </div>
+          <div class="modal-body">
+            <p>Wilayah kerja dengan aktivitas untuk memperoleh informasi kondisi geologi guna menemukan dan memperoleh perkiraan cadangan migas. Setelah menemukan cadangan ekonomis, maka wilayah kerja eksplorasi akan berubah status menjadi wilayah kerja eksploitasi.  Namun, apabila hingga jangka waktu yang ditentukan WK Eksplorasi tidak menemukan cadangan migas ekonomis, maka akan masuk proses terminasi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eksplorasi 3-->
+    <div id="eksplorasi3" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h4 class="modal-title">WK Hidrokarbon Nonkonvensional </h4>
+          </div>
+          <div class="modal-body">
+            <p>Wilayah kerja eksplorasi dengan aktivitas mencari cadangan migas yang berasal dari reservoir tempat terbentuknya minyak dan gas bumi dengan permeabilitas (kemampuan meloloskan          partikel dengan menembusnya) rendah.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eksplorasi 4-->
+    <div id="eksplorasi4" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h4 class="modal-title">WK Proses Terminasi</h4>
+          </div>
+          <div class="modal-body">
+            <p>Wilayah kerja yang berakhir masa kontraknya karena tidak dapat menemukan cadangan migas ekonomis hingga jangka waktu ditentukan.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -590,6 +1006,7 @@
   <script type="text/javascript" src="js/picturefill-background.js"></script>
   <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
   <script type="text/javascript" src="js/velocity.min.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   
 </body>

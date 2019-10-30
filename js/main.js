@@ -146,22 +146,78 @@ $(document).ready(function() {
         $(".page__static__tambang").removeClass("moveDown");                
       } 
       else if (index == 11 && direction == "down") {    
+        $(".overlay__halfblack2").fadeIn(300);
       } 
       else if (index == 12 && direction == "up") {    
+        $(".overlay__halfblack2").fadeOut(300);
       } 
       else if (index == 12 && direction == "down") {    
-
+        $(".overlay__halfblack2").fadeOut(300);
+        $(".overlay__grey").fadeIn(300);
       } 
       else if (index == 13 && direction == "up") {    
+        $(".overlay__halfblack2").fadeIn(300);
+        $(".overlay__grey").fadeOut(300);
         
       } 
       else if (index == 13 && direction == "down") {    
-
+        
       } 
       else if (index == 14 && direction == "up") {    
         
       } 
       else if (index == 14 && direction == "down") {    
+        $(".overlay__halfblack2").fadeIn(300);
+        $(".overlay__grey").fadeOut(300);
+        
+      } 
+      else if (index == 15 && direction == "up") {    
+        $(".overlay__halfblack2").fadeOut(300);
+        $(".overlay__grey").fadeIn(300);
+        
+      } 
+      else if (index == 15 && direction == "down") {    
+        // $(".page__static__tambang").addClass("moveLeft");  
+        // $(".page__static__produksi").removeClass("scrollSlide");
+        $(".overlay__halfblack2").fadeOut(300);
+        $(".page__static__tambang").addClass("moveUp");  
+        $(".page__static__produksi").addClass("moveDown");
+      } 
+      else if (index == 16 && direction == "up") {    
+        // $(".page__static__tambang").removeClass("moveLeft");  
+        // $(".page__static__produksi").addClass("scrollSlide");
+        $(".page__static__tambang").removeClass("moveUp");  
+        $(".page__static__produksi").removeClass("moveDown");
+        $(".overlay__halfblack2").fadeIn(300);
+        
+      } 
+      else if (index == 16 && direction == "down") {    
+        
+      } 
+      else if (index == 17 && direction == "up") {    
+
+      } 
+      else if (index == 17 && direction == "down") {    
+        $(".page__static__produksi").addClass("moveUp");  
+        $(".page__static__eksplo").addClass("moveDown");
+      } 
+      else if (index == 18 && direction == "up") {    
+        $(".page__static__produksi").removeClass("moveUp");  
+        $(".page__static__eksplo").removeClass("moveDown");
+      } 
+      else if (index == 18 && direction == "down") {    
+
+      } 
+      else if (index == 19 && direction == "up") {    
+
+      } 
+      else if (index == 19 && direction == "down") {    
+
+      } 
+      else if (index == 20 && direction == "up") {    
+
+      } 
+      else if (index == 20 && direction == "down") {    
 
       } 
       

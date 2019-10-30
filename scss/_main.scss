@@ -9,7 +9,7 @@
 // 1.0 Page
 
 body{
-  @include gradientBlue2;
+  // @include gradientBlue2;
 }
 
 .picturefill-background {
@@ -40,6 +40,10 @@ body{
 
       p{
         font-size: 1.3em;
+        
+        @include max-responsive($sm){
+          font-size: 0.8em;          
+        }
       }
     }
 
@@ -65,6 +69,162 @@ body{
 
     h3{
       color: $white;
+    }
+  }
+
+  &__12{
+
+    .text{
+      margin-top: auto;
+      font-size: 15px;
+    }
+
+    .graphic{
+
+      @include range-responsive($lg,$xlg){
+        width: 50%;
+        margin: auto;
+      }
+    }
+    
+    .credit-label{      
+      @include range-responsive($lg,$xlg){
+        right: 0% !important;
+  
+        img{
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &__14{
+    .text{
+      font-size: 16px;
+    }
+    .graphic{
+      @include range-responsive($lg,$xlg){
+        width: 45%;
+        margin: auto;
+      }
+    }
+  }
+
+  &__15{
+    .graphic{
+      @include range-responsive($lg,$xlg){
+        width: 55%;
+        margin: auto;
+      }
+    }    
+  }
+
+  &__16, &__17{
+
+    .container{
+      position: relative;
+    }
+
+    .highlight{
+      position: absolute;
+      top: 10vw;
+      margin: auto;
+      left: 0;
+      right: 0;
+
+      span{
+        color: #B3AA4B;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      @include max-responsive($sm){
+        top: 80vw;
+      }
+    }
+  }
+
+  &__19{
+
+    .eksplorasi{
+
+      &__item{
+        // width: 20%;
+        // float: left;
+        height: 100px;
+        display: table;
+        margin: 10px auto;
+        
+        .box{
+          color: #fff;
+          text-align: center;
+          border-radius: 40px 40px 0px 40px;
+          padding: 10px;
+          display: table-cell;
+          vertical-align: middle;
+
+          h5{
+            font-size: 1.2em;
+          }
+          
+          p{
+
+          }
+
+          &--red{
+            background: #9D1D32;
+          }
+          &--green{
+            background: #B7AA43;
+          }
+          &--yellow{
+            background: #DE9837;
+          }
+        }
+
+        .image{
+          display: table-cell;
+          vertical-align: middle;
+
+          img{
+            width: 65px;
+          }
+        }
+      }
+    }
+
+    .wk{
+      position: relative;
+
+      .click{
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        z-index: 2;
+
+        img{
+          width: 60px;
+        }
+      }
+
+      &__item{
+        color: #000;
+        text-align: center;
+        background: url(../images/item-eksplo.png) no-repeat;
+        background-size: cover;
+        padding: 10px;
+        height: 180px;
+        width: 160px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+
+        &:hover{
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
     }
   }
 
@@ -183,9 +343,27 @@ body{
 
     &__tambang{
       top: 100%;
-      @include gradientBlue3;      
+      @include gradientBlue3;   
+      
+      .overlay__grey{
+        display: none;
+      }
+      
+      .overlay__halfblack2{
+        background: rgba(0,0,0,0.5);
+        display: none;
+      }
     }
-
+    
+    &__produksi{
+      @include gradientBlue3;   
+      top: 100%;
+    }
+    
+    &__eksplo{
+      top: 100%;
+      background: #402316;
+    }
   }
 
   &__image {
@@ -224,9 +402,34 @@ body{
     }
 
   }
+  
+  .label{
+    background: url(../images/label.png) no-repeat;
+    background-size: cover;
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    color: black;
+  }
 
-  &__2{
-    // @include gradientBlue;
+  .credit-chart{
+    color: $white;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+
+    @include range-responsive($lg,$xlg){
+      left: 2%;
+      font-size: 13px;
+    }
+  }
+
+  .credit-label{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 2;
   }
 }
 
@@ -234,13 +437,13 @@ body{
 .cover {
   position: relative;
   overflow: hidden;
-  // @include gradientBlue;
-  background: linear-gradient(31deg, #f2b06d, #589ab8);
-  background-size: 400% 400%;
+  @include gradientBlue2;
+  // background: linear-gradient(31deg, #f2b06d, #589ab8);
+  // background-size: 400% 400%;
 
-  -webkit-animation: AnimationName 17s ease infinite;
-  -moz-animation: AnimationName 17s ease infinite;
-  animation: AnimationName 17s ease infinite;
+  // -webkit-animation: AnimationName 17s ease infinite;
+  // -moz-animation: AnimationName 17s ease infinite;
+  // animation: AnimationName 17s ease infinite;
 
   @-webkit-keyframes AnimationName {
       0%{background-position:82% 0%}
@@ -418,28 +621,33 @@ body{
 
   @media (min-width: 768px){
     .modal-dialog {
-        width: 600px;
+        width: 700px;
         margin: 15% auto 20px;
     }
   }
   .modal-content {
-    border-radius: 0px;
-    background-color: $yellow;
+    border-radius: 10px;
+    background: url(../images/bg-popup-eksplo.png) no-repeat center;
+    background-size: 70% 100%;
+    background-color: #E6E0DD;
+    padding: 20px 40px;
   }
   .modal-header {
     border-bottom: 0px;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2em;
 
     .close {
       position: absolute;
-      top: -10px;
-      right: -10px;
-      background: #ffaa00;
+      top: 10px;
+      right: 10px;
+      background: #9D2231;
+      border-radius: 20px;
       border: none;
-      padding: 0px 10px;
-      font-size: 20px;
+      padding: 5px 10px;
+      font-size: 17px;
       font-weight: bold;
+      color: white;
 
       @include max-responsive($sm){
         right: 0;
@@ -448,7 +656,7 @@ body{
   }
 
   .modal-body{
-    text-align: center;
+    text-align: left;
   }
 }
 

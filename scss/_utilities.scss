@@ -117,36 +117,48 @@ a{
 // 4.2 Font Text
 
 .text{
-  font-size: 19px;
+  font-size: 18px;
   color: $white;
-  margin-top: -20vw;
-
+  
   @include max-responsive($sm){
-    font-size: 16px;
+    font-size: 15px;
   }
-
+  
   &--white{
     color: $white;
   }
+
   &--black{
     color: $black;
   }
-
+ 
+  &--lightblack{
+    color: $lightblack;
+  }
+  
   &--bigger{
     font-size: 25px;
   }
-
+  
   &--smaller{
     font-size: 12px;
   }
-
+  
   &--bold{
     font-weight: bold;
   }
-
+  
   &--title{
     font-size: 25px;
     font-weight: bold;
+  }
+  
+  &__top{
+    margin-top: -20vw;   
+    
+    @include max-responsive($sm){
+      margin-top: -75vw;
+    }
   }
 }
 
@@ -449,8 +461,13 @@ a{
   &__halfblack{
     @include bg-black;
   }
+
   &__radial--black{
     @include bg-radial-black;
+  }
+
+  &__grey{
+    background: rgba(209, 209, 209, 0.6);
   }
 }
 
