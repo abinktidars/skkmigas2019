@@ -257,11 +257,6 @@ body{
       &--moon{
         display: none;
       }
-      &--gedung{
-        // display: none;
-        // right: -20%;      
-      }
-
     }
 
     &__apart{
@@ -315,6 +310,14 @@ body{
         left: -40%;
       }
     }
+
+    &__discuss{
+      
+      &--people{
+        right: -100%;
+      }
+    }
+
   }
 
   &__static {
@@ -322,13 +325,10 @@ body{
     top: 0;
     left: 0;
     @include display_full;
-    @include transition(0.7s);
-
-    
+    @include transition(0.7s);    
 
     &__build{
       top: 100%;
-      // @include gradientBlue2;
 
       .overlay__halfblack{
         display: none;
@@ -364,6 +364,11 @@ body{
       top: 100%;
       background: #402316;
     }
+
+    &__discuss{
+      top: 100%;      
+    }
+
   }
 
   &__image {
@@ -440,7 +445,6 @@ body{
   @include gradientBlue2;
   // background: linear-gradient(31deg, #f2b06d, #589ab8);
   // background-size: 400% 400%;
-
   // -webkit-animation: AnimationName 17s ease infinite;
   // -moz-animation: AnimationName 17s ease infinite;
   // animation: AnimationName 17s ease infinite;
@@ -617,6 +621,10 @@ body{
 .popup__content {
   .modal-dialog{
     margin: 60% auto 10px;
+    
+    @include max-responsive($sm){
+      margin: 20% auto 10px;
+    }
   }
 
   @media (min-width: 768px){
@@ -631,6 +639,10 @@ body{
     background-size: 70% 100%;
     background-color: #E6E0DD;
     padding: 20px 40px;
+
+    @include max-responsive($sm){
+      padding: 20px 10px;
+    }
   }
   .modal-header {
     border-bottom: 0px;

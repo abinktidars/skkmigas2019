@@ -212,12 +212,45 @@ $(document).ready(function() {
 
       } 
       else if (index == 19 && direction == "down") {    
-
+        $(".page__static__eksplo").addClass("moveUp");  
+        $(".page__static__discuss").addClass("moveDown");
+        $(".page__animation__discuss--people").velocity({right: "0%"}, {delay: 100, duration: 1000});;
       } 
       else if (index == 20 && direction == "up") {    
-
+        $(".page__static__eksplo").removeClass("moveUp");  
+        $(".page__static__discuss").removeClass("moveDown");
       } 
       else if (index == 20 && direction == "down") {    
+
+      } 
+      else if (index == 21 && direction == "up") {    
+
+      } 
+      else if (index == 21 && direction == "down") {    
+
+      } 
+      else if (index == 22 && direction == "up") {    
+
+      } 
+      else if (index == 22 && direction == "down") {    
+
+      } 
+      else if (index == 23 && direction == "up") {    
+
+      } 
+      else if (index == 23 && direction == "down") {    
+
+      } 
+      else if (index == 24 && direction == "up") {    
+
+      } 
+      else if (index == 24 && direction == "down") {    
+
+      } 
+      else if (index == 25 && direction == "up") {    
+
+      } 
+      else if (index == 25 && direction == "down") {    
 
       } 
       
